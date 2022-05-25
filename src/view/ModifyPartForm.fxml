@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AddPartPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartsController">
+   <children>
+      <Label layoutX="72.0" layoutY="60.0" prefHeight="20.0" prefWidth="100.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="modifyPartInHouseRadio" layoutX="193.0" layoutY="62.0" mnemonicParsing="false" onAction="#onRadioActionInhouse" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="modifyTGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="modifyPartOutsourcedRadio" layoutX="284.0" layoutY="62.0" mnemonicParsing="false" onAction="#onRadioActionOutsourced" text="Outsourced" toggleGroup="$modifyTGroup" />
+      <VBox layoutX="93.0" layoutY="122.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Inv">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Price/Cost">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Max">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="modifyPartMachineOrCompanyLabel" text="Machine ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="193.0" layoutY="122.0" prefHeight="220.0" prefWidth="174.0" spacing="14.0">
+         <children>
+            <TextField fx:id="modifyPartIDText" disable="true" opacity="0.43" />
+            <TextField fx:id="modifyPartNameText" />
+            <TextField fx:id="modifyPartInvText" />
+            <TextField fx:id="modifyPartPriceCostText" />
+            <TextField fx:id="modifyPartMaxText" />
+            <TextField fx:id="modifyPartMachineIDText" />
+         </children>
+      </VBox>
+      <TextField fx:id="modifyPartMinText" layoutX="447.0" layoutY="280.0" />
+      <Label layoutX="399.0" layoutY="282.0" text="Min">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="modifyPartSaveButton" layoutX="391.0" layoutY="369.0" mnemonicParsing="false" onAction="#onButtonActionModifyPartSave" text="Save" />
+      <Button fx:id="modifyPartCancelButton" layoutX="470.0" layoutY="369.0" mnemonicParsing="false" onAction="#onButtonActionModifyCancelButton" text="Cancel" />
+   </children>
+</AnchorPane>
