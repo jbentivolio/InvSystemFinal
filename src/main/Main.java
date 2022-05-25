@@ -1,9 +1,7 @@
 package main;
 
 /**
- * Jacob Bentivolio Student ID:001252668 WGU-C482
- *
- * Javadoc = /BentivolioWGUC482/Javadocs
+ * Jacob Bentivolio 
  */
 
 import javafx.application.Application;
